@@ -1,5 +1,6 @@
 package blurayInterface;
 
+import java.util.Scanner;
 import java.util.Vector;
 
 public class BluRay implements InterfaceBluRay {
@@ -22,4 +23,11 @@ public class BluRay implements InterfaceBluRay {
         System.out.println("");
     }
     
+    public void cadastrarBluRay(ItemBluRay obj) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Nome do Cliente: ");
+        obj.setNomeCliente(scan.nextLine());
+        System.out.println("Valor do Blu-Ray: ");
+        obj.setPreco(scan.nextDouble());
+    }
 }
